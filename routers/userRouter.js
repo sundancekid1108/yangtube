@@ -16,6 +16,6 @@ userRouter.get(routes.editProfile, editProfile);
 userRouter.get(routes.changePassword, changePassword);
 
 //프로필 세부정보
-userRouter.get(routes.userDetail, userDetail);
+userRouter.get(routes.userDetail(), userDetail);
 
 export default userRouter;
