@@ -428,7 +428,9 @@ input[type="submit"] {
 
 .videoBlock video {
   margin-bottom: 10px;
-  max-width: 100%; }
+  max-width: 100%;
+  width: 100%;
+  overflow: hidden; }
 
 .videoBlock .videoBlock__title {
   font-size: 18px;
@@ -505,6 +507,15 @@ input[type="submit"] {
     .videoPlayer .videoPlayer__controls i {
       font-size: 25px;
       cursor: pointer; }
+
+.record-container {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 50px; }
+  .record-container video {
+    background-color: #444444;
+    width: 100%;
+    margin-bottom: 20px; }
 
 .video-detail__container {
   display: -webkit-box;
@@ -632,12 +643,3 @@ input[type="submit"] {
             align-items: center; }
     .user-profile .user-profile__btns a:not(:last-child) {
       margin-bottom: 20px; }
-
-.record-container {
-  width: 100%;
-  max-width: 320px;
-  margin-bottom: 50px; }
-  .record-container video {
-    background-color: #444444;
-    width: 100%;
-    margin-bottom: 20px; }

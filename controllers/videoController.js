@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import routes from "../routes";
 import Video from "../models/Video";
 import Comment from "../models/Comment";
@@ -57,7 +58,7 @@ export const videoDetail = async(req, res) => {
         params: { id }
     } = req;
     try {
-        const video = await Video.findById(id).populate("creator");
+        const video = await Video.findById(id).populate("creator").populate("comments");
         console.log(video);
         res.render("videoDetail", { pageTitle: video.title, video });
     } catch (error) {
@@ -146,8 +147,15 @@ export const postAddComment = async(req, res) => {
             text: comment,
             creator: user.id
         });
+        console.log(newComment);
+        video.comments.push(newComment.id);
+        video.save();
     } catch (error) {
+        console.log(error);
+
         res.status(400);
+
+
     } finally {
         res.end();
     }
