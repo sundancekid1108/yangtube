@@ -10,7 +10,7 @@
         "@babel/node": "^7.4.5",
         "@babel/polyfill": "^7.4.4",
         "@babel/preset-env": "^7.4.5",
-        "acorn": "^6.1.1",
+        "acorn": "^6.4.1",
         "autoprefixer": "^9.5.1",
         "aws-sdk": "^2.460.0",
         "axios": "^0.18.0",
